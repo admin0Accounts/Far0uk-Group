@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="شركة تقدم أفضل الخدمات للعملاء.">
+    <title>Farouk Group</title>
+    <link rel="stylesheet" href="stily.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <!-- شاشة البداية التي تحتوي على الشعار -->
+    <div id="intro">
+        <img src="img/16475bb1-a9f9-4c3a-afe5-1bb438c77afa-removebg-preview.png" alt="[شعار الشركة]" id="logo">
+    </div>
+
+    <!-- المحتوى الرئيسي الذي سيظهر بعد مرور 3 ثوانٍ -->
+    <div id="main-content" class="hidden">
+        <header id="header">
+           <B>Farouk Group</B>
+        </header>
+
+        <!-- قسم البطل -->
+        <section class="hero">
+
+        </section>
+
+        <!-- قسم الرابط -->
+        <section id="contact2">
+            <p><strong>اضغط على الزر أدناه لزيارة موقعنا</strong></p>
+            <a href="https://maps.app.goo.gl/sZW97EzBPNgopFQL9" target="_blank" class="link-button">اذهب إلى الموقع</a>
+        </section>
+
+        <!-- قسم الاتصال -->
+        <section id="contact">
+            <h2>تواصل معنا</h2>
+            <b>
+                <p>MOBILE : <strong> 01000178826</strong></p>
+                <p>TEL : <strong> 0223817038 - 0223817039 </strong></p>
+                <p>FAX : <strong>0223817057</strong></p>
+            </b>
+        </section>
+
+        <!-- الفوتر -->
+        <footer>
+            <p>&copy; 2024 Farouk Group. جميع الحقوق محفوظة.</p>
+        </footer>
+    </div>
+
+    <!-- جافا سكربت لإخفاء الشعار بعد 3 ثوانٍ -->
+    <script>
+        setTimeout(() => {
+            document.getElementById('intro').style.display = 'none';
+            document.getElementById('main-content').classList.remove('hidden');
+        }, 3000); /* 3 ثواني */
+    </script>
+</body>
+</html>

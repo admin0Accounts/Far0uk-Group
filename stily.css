@@ -1,0 +1,191 @@
+/* إعدادات الـ Body */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* شاشة البداية التي تحتوي على الشعار */
+#intro {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    animation: fadeInIntro 3s ease-out; /* تأثير ظهور الشعار */
+}
+
+/* الشعار نفسه */
+#logo {
+    max-width: 80%;
+    max-height: 80%;
+    animation: scaleUp 3s ease-out; /* تأثير تكبير الشعار */
+}
+
+/* إخفاء المحتوى الرئيسي في البداية */
+.hidden {
+    display: none;
+}
+
+/* رأس الصفحة */
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 28px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: block; /* عرض الهيدر الآن */
+    animation: slideInDown 0.5s ease-out;
+}
+
+/* قسم البطل */
+.hero {
+    background: url('img/R.jfif') no-repeat center center/cover;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    position: relative;
+    padding: 20px;
+}
+
+/* تنسيق النص في قسم البطل */
+.hero h1 {
+    font-size: 48px;
+    color: rgb(6, 75, 202);
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero p {
+    font-size: 20px;
+    color: #f1f1f1;
+}
+
+/* تنسيق الأقسام */
+section {
+    padding: 40px 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* زر الرابط */
+.link-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #4CAF50; /* لون الخلفية */
+    color: white; /* لون النص */
+    text-decoration: none; /* إزالة الخط السفلي */
+    border-radius: 5px; /* زوايا مستديرة */
+    font-size: 18px; /* حجم الخط */
+    transition: background-color 0.3s, transform 0.3s; /* تأثيرات عند التمرير */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* تأثير الظل */
+}
+
+.link-button:hover {
+    background-color: #45a049; /* لون الخلفية عند التمرير */
+    transform: translateY(-5px); /* رفع الزر قليلاً */
+}
+
+/* تنسيق النص في قسم الاتصال */
+#contact2 p {
+    font-size: 20px;
+}
+
+/* الفوتر */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #007bff;
+    color: white;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* تأثيرات الأنيميشن */
+@keyframes fadeInIntro {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes scaleUp {
+    0% { transform: scale(0); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes slideInDown {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Media Queries for Responsive Design */
+
+/* الشاشات الصغيرة (الهواتف) */
+@media (max-width: 768px) {
+    header {
+        padding: 15px;
+        font-size: 24px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    section {
+        padding: 30px 15px;
+        margin: 10px;
+    }
+
+    .link-button {
+        padding: 12px 25px;
+        font-size: 16px;
+    }
+
+    footer {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+/* الشاشات الكبيرة (الأجهزة اللوحية والأكبر) */
+@media (max-width: 1024px) {
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    section {
+        padding: 35px 20px;
+    }
+}
